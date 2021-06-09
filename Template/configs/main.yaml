@@ -1,0 +1,11 @@
+
+epochs: 10
+warmup_epochs: 2
+eval_every: 1
+
+data:
+  batch_size: 8
+  read_limit: 5000
+
+model:
+  optim_lr: 0.0001
