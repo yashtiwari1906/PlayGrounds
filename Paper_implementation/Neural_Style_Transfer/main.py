@@ -28,7 +28,7 @@ if __name__ == "__main__":
     model=VGG().to(device).eval() 
 
     #initialize the paramerters required for fitting the model
-    epoch=100
+    epoch=7000
     lr=0.004
     
 
@@ -48,9 +48,7 @@ if __name__ == "__main__":
         total_loss.backward()
         optimizer.step()
         #print the image and save it after each 100 epoch
-        if(e/100):
-            #print(total_loss)
             
-            save_image(generated_image,"gen.png")
+        save_image(generated_image,"gen.png")
 
     print("completed!!!")
