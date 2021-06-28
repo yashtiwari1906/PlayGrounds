@@ -20,8 +20,8 @@ def image_loader(path):
 if __name__ == "__main__":
     #Loading the original and the style image
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    original_image = image_loader(r"C:\Users\yasht\Desktop\neural_style_transfer\content_image.jpg")
-    style_image = image_loader(r"C:\Users\yasht\Desktop\neural_style_transfer\style_image.jpg")
+    original_image = image_loader("content_image.jpg")
+    style_image = image_loader("style_image.jpg")
     #Creating the generated image from the original image
     generated_image=original_image.clone().requires_grad_(True)
 
